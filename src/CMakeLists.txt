@@ -30,7 +30,7 @@ target_sources(canopen-stm32f7xx
     app/clock_spec.c
     # system startup
     config/startup_main.c
-    config/startup_stm32f769xx.s
+    config/startup_stm32f746xx.s
     config/system_stm32f7xx.c
     # driver
     driver/stm32f7xx-hal/drv_can_can1.c
@@ -53,5 +53,5 @@ target_link_libraries(canopen-stm32f7xx canopen-stack stm32f7xx-hal)
 #---
 # specify the linker file and the resulting image
 #
-setLinkerScript(canopen-stm32f7xx "${CMAKE_CURRENT_SOURCE_DIR}/config/stm32f769i_discovery")
+setLinkerScript(canopen-stm32f7xx "${CMAKE_CURRENT_SOURCE_DIR}/config/STM32F746ZGTx_FLASH")
 setOutfile(canopen-stm32f7xx "canopen-stm32f7xx")
