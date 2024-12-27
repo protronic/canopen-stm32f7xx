@@ -115,5 +115,6 @@ void AppStart(void)
      */
     while (1) {
         COTmrProcess(&Clk.Tmr);
+        COCSdoFind(&Clk, 1);
     }
 }
